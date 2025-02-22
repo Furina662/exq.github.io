@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Jared's home</title>
+	    <link rel="stylesheet" href="style.css">
+	    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+	</head>
+	
+	<!--Ban-->
+	<div class="pio-container left">
+		    <div class="pio-action"></div>
+		    <canvas id="pio" width="200" height="250"></canvas>
+		</div>
+		<link rel="stylesheet" href="banniang/css/pio.css">
+		<script src="banniang/js/pio.js"></script>
+		<script src="banniang/js/l2d.js"></script>
+		<script>
+		    var pio = new Paul_Pio({
+		    "mode": "fixed",
+		    "tips": true,
+		    "hidden": true,
+		    "content": {
+		        "welcome": ["欢迎来到Jaredの小窝", "这里是Jaredの一些折腾日记，欢迎前往阅读！"],
+		    },
+		    "model": [
+		    "banniang/live2d-widget-models/live2d-widget-model-miku/assets/miku.model.json", //鍒濋煶
+		    "banniang/live2d-widget-models/live2d-widget-model-shizuku/assets/shizuku.model.json",// 钀屽
+		    "banniang/live2d-widget-models/live2d-widget-model-koharu/assets/koharu.model.json",
+		    "banniang/live2d-widget-models/live2d-widget-model-haru/01/assets/haru01.model.json",
+		    "banniang/live2d-widget-models/live2d-widget-model-wanko/assets/wanko.model.json",
+		    "banniang/live2d-widget-models/live2d-widget-model-vert/vert_classic/vert_classic.model.json",
+		    "banniang/live2d-widget-models/live2d-widget-model-nepgear_extra/nepgear_extra/nepgear_extra.model.json",
+		    "banniang/live2d-widget-models/live2d-widget-model-haruto/assets/haruto.model.json",
+		    "banniang/live2d-widget-models/live2d-widget-model-haru/02/assets/haru02.model.json",
+		    "banniang/live2d-widget-models/live2d-widget-model-histoire/histoire/histoire.model.json",
+		    "banniang/live2d-widget-models/live2d-widget-model-blanc_normal/blanc_normal/blanc_normal.model.json",
+		    ]
+		});
+	</script>
+
+	<body>
+	    <!--Navbar-->
+	    <nav id="navbar">
+	        <div class="nav-container">
+	            <img src="https://pic.imgdb.cn/item/676789c4d0e0a243d4e7ef0c.png" alt="Logo">
+	            <div class="menu-toggle">?</div>
+	        </div>
+	        <ul class="nav-menu">
+	            <li><a href="index.html">首页</a></li>
+	            <li><a href="https://forum.exqstudio.cn" target="_blank">论坛</a></li>
+	            <li><a href="download.html" target="_blank">下载</a></li>
+	            <li><a href="about.html">关于团队</a></li>
+	            <li><a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&amp;k=s9hmkfGoSf-wJU7F9utssiFY1H8n1Wm1&amp;authKey=xn9gD93GzSQuPXeL6iGcDgVtqgeCgWuPGYUSSSGJUoztP%2F0fE0yZxwu7mb%2BPvg0M&amp;noverify=0&amp;group_code=538933981" target="_blank">加入我们</a></li>
+	            <li><a href="donation.html">赞助我们</a></li>
+	        </ul>
+	    </nav>
+	    <!--Tper_eff-->
+		<script> 
+			document.addEventListener("DOMContentLoaded", function(){
+			  	const typingSpeed=100; 
+
+			  	function typeText(element,callback) {
+			    	const text=element.textContent;
+			    	element.textContent="";
+			    	element.style.visibility="visible"; 
+			    	let charIndex=0;
+			    	function typeChar()
+					{
+			      		if(charIndex<text.length) element.textContent+=text[charIndex],charIndex++,setTimeout(typeChar,typingSpeed);
+			      		else if(callback) callback();
+			    	}
+					typeChar();
+			  	}
+			  	const observerOptions = {
+			    	root:null,
+			    	threshold:0.5,
+			  	};
+			  	const observer=new IntersectionObserver((entries,observer)=>{
+			    	entries.forEach((entry)=>{
+			      		if (entry.isIntersecting){
+				        	
+				        	const ciAndCuElements = entry.target.querySelectorAll("line");
+				        	ciAndCuElements.forEach((element)=>{
+				          		typeText(element,null);
+				        	});
+				        	
+				        	observer.unobserve(entry.target);
+				      	}
+				    });
+				}, observerOptions);
+				
+				const pages = document.querySelectorAll(".spage");
+				pages.forEach((spage) => {
+				    observer.observe(spage);
+				});
+			});
+		</script>
+		
+	    <!--Main-->
+	    <div class="page">
+		    <div class="container_board">
+		        <div class="glass-box">
+		        	<div class="spage" id="csee">
+			            <div class="text">
+							<line style="position: relative;font-size: 60px;left: 20px;top: -100px;color: white;">Hello Welcome to Jared's home</line>
+						</div>
+			        </div>
+			        <div class="spage">
+			            <img class="glass-img" src="https://pic1.imgdb.cn/item/676789d6d0e0a243d4e7ef17.jpg" alt="Image"> <!--image-->
+			            <div class="text">
+							<line>Test Jared -------- Test Jared -------------------------------------------------------------------------------------------------------</line>
+						</div>
+			        </div>
+			        <div class="spage">
+			            <img class="glass-img" src="https://pic1.imgdb.cn/item/676789d6d0e0a243d4e7ef17.jpg" alt="Image"> <!--image-->
+			            <div class="text">
+							<line>Test2 Jared -------- Test2 Jared -----222222--------------------------------------------------------------------------</line>
+						</div>
+			        </div>
+			        <div class="spage">
+			        	<div class="text">
+							<line>Test3 Jared -------- Test3 Jared -----333333--------------------------------------------------------------------------</line>
+						</div>
+					</div>
+			        
+			        <div class="navigation-buttons">
+					    <button class="prev-btn">
+					        <i class="fas fa-angle-double-left"></i>
+					    </button>
+					    
+					    <p id="pageNumber" style="position: absolute;left: 10px;color: white;">Page</p>
+					    <script>
+					        const pages = document.querySelectorAll('.spage');
+					        const pageNumberElement = document.getElementById("pageNumber");
+					
+					        for (let i = 0; i < pages.length; i++) {
+					            if (getComputedStyle(pages[i]).display === 'block') {
+					                pageNumberElement.textContent = "Current Page: " + (i + 1);
+					                break;
+					            }
+					        }
+					    </script>
+										    
+					    
+					    <button class="next-btn">
+					        <i class="fas fa-angle-double-right"></i>
+					    </button>
+					</div>
+		        </div>
+		    </div>
+	    </div>
+	
+	    <!--Bot_bar-->
+	    <footer class="footer">
+	        <div class="footer-content">
+	            <div class="footer-logo">
+	                <img src="https://pic.imgdb.cn/item/676789c4d0e0a243d4e7ef0c.png" alt="Logo">
+	            </div>
+	            <div class="footer-info">
+	                <div class="footer-links">
+	                    <a href="about.html">关于团队</a>
+	                    <a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&amp;k=s9hmkfGoSf-wJU7F9utssiFY1H8n1Wm1&amp;authKey=xn9gD93GzSQuPXeL6iGcDgVtqgeCgWuPGYUSSSGJUoztP%2F0fE0yZxwu7mb%2BPvg0M&amp;noverify=0&amp;group_code=538933981" target="_blank">加入我们</a>
+	                    <a href="donation.html">赞助我们</a>
+	                </div>
+	                <div class="footer-contact">
+	                    <span>QQ群：538933981</span>
+	                    <span>邮箱：exqstudio@outlook.com</span>
+	                </div>
+	            </div>
+	            <div class="footer-copyright">
+	                <span>Developed by <a href="https://space.bilibili.com/496103648" style="color: white;">Jared</a></span>
+	                <br><br>
+	                <span>&#169;EXQ Studio</span> 
+	            </div>
+	        </div>
+	    </footer>
+	    
+	    <!--Btn_con-->
+	    <script>
+	        document.addEventListener("DOMContentLoaded",function() {
+	            const prevBtn=document.querySelector('.prev-btn');
+	            const nextBtn=document.querySelector('.next-btn');
+	            const pages=document.querySelectorAll('.spage');
+	            let currentPageIndex=0; 
+
+	            function updateButtonState() {
+	                if(currentPageIndex===0) prevBtn.disabled=1;
+	                else prevBtn.disabled=0;
+	                if(currentPageIndex===pages.length-1) nextBtn.disabled=1;
+	                else nextBtn.disabled=0;
+	            }
+	
+	            function switchPage(direction) {
+	                let targetPageIndex=currentPageIndex+direction;
+	                
+	                console.log(targetPageIndex);
+	                console.log(pages.length);
+	                
+	                if(targetPageIndex>=0&&targetPageIndex<pages.length){
+	                	console.log("done");
+	                	
+	                    const currentPage=pages[currentPageIndex];
+	                    const targetPage=pages[targetPageIndex];
+
+                    	targetPage.setAttribute('id','csee');
+	                    currentPage.setAttribute('id','');
+	                    
+	                    currentPageIndex=targetPageIndex;
+	
+	                    updateButtonState();
+	                }
+	            }
+	            
+	            prevBtn.addEventListener('click',function() {
+	                switchPage(-1);
+	            });
+	            
+	            nextBtn.addEventListener('click',function() {
+	                switchPage(1);
+	            });
+	            
+	            updateButtonState();
+	        });
+	    </script>
+	    
+		<!--Navbar_con-->
+		<script> 
+	        let lastScrollTop=0;
+	        navbar=document.getElementById("navbar");
+	        window.addEventListener("scroll",function()
+			{
+	            let scrollTop=window.pageYOffset||document.documentElement.scrollTop;
+	            if(scrollTop>lastScrollTop) navbar.classList.add('active');
+				else navbar.classList.remove('active');
+	            lastScrollTop=scrollTop;
+	        })
+		</script>
+	</body>
+</html>

@@ -1,0 +1,387 @@
+/* ���ñ���ͼƬ */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('https://pic4.zhimg.com/v2-9db7bf3b825f2db103a534ca59c75481_r.jpg?source=1940ef5c');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+}
+
+.page {}
+
+.spage {
+	position: relative;
+	height: 700px;
+	display: none;
+}
+.spage:nth-child(1) {}
+.spage:nth-child(2) {}
+.spage:nth-child(3) {}
+.spage:nth-child(4) {}
+
+#high_b {
+	position: relative;font-size: 60px;
+	left: 20px;
+	top: -100px;
+	color: white;
+}
+
+#csee {
+	display: block;
+}
+
+/* ë����Ч�� */
+.container_board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+/* ��ť������ʽ */
+.navigation-buttons {
+    position: relative;
+    left: 600px;
+    top: 0px;
+    transform: translateY(-50%);
+    flex-direction: column;
+    gap: 10px;
+    z-index: 2;
+}
+
+.navigation-buttons button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.navigation-buttons button:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.navigation-buttons button[disabled] {
+    cursor: not-allowed;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* ��ťͼ�� */
+.navigation-buttons i {
+    font-size: 24px;
+    color: white;
+}
+
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 1300px; /* �̶����� */
+    height: 700px; /* �̶��߶� */
+    overflow: hidden; /* �������ݳ������� */
+    flex-direction: column; /* �����ݴ��ϵ������� */
+    position: relative;
+}
+
+.glass-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    object-fit: cover;
+}
+
+.frosted-box {
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* �ı���ʽ */
+.text {
+    position: relative;
+    width: 1250px;
+    height: 500px;
+    top: 200px;
+    left: 20px;
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+}
+
+text.line {
+	width: 1300px;
+	color: #fff;
+  	letter-spacing: 2px;
+  	display: inline-block; /* ��֤ÿ�� <p> ��ǩ����Ϊһ�� */
+}
+
+/* ���������� */
+nav {
+  	background: rgba(0, 0, 0, 0.5);
+  	position: fixed;
+  	top: 0;
+  	width: 100%;
+  	height: 60px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: space-between;
+  	padding: 0 20px;
+  	transition: 0.3s;
+}
+
+nav.active{
+	top: -60px;
+}
+  
+nav img {
+	width: 120px;
+	height: 50px;
+	margin-left: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	position: absolute;
+	left: 50px;
+	margin-left: 120px;
+}
+
+nav ul li {
+	margin-right: 20px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 16px;
+	position: relative;
+	z-index: 1;
+}
+
+nav div {
+	display: flex;
+	align-items: center;
+}
+
+nav div a {
+	text-decoration: none;
+	color: #fff;
+	margin-left: 20px;
+	font-size: 16px;
+	position: relative;
+	z-index: 1;
+}
+.menu-toggle {
+	display: none;
+	font-size: 24px;
+	color: #fff;
+	cursor: pointer;
+	margin-right: 10px;
+}
+/** 人物介绍 **/
+.container{
+    /* 100%窗口宽高 */
+    min-height: 100vh;
+    /* 弹性布局 水平+垂直居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    z-index: 1;
+}
+.container ul{
+    list-style: none;
+    text-align: center;
+}
+.container li{
+    width: 450px;
+    height: 450px;
+    display: inline-block;
+    margin: 5px;
+    text-align: left;
+    position: relative;
+    padding-top: 0px;
+}
+.container li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    z-index: 10;
+    /* 设置transform的过�?*/
+    transition: transform 0.3s; /* MIUI9快如闪电！！！！！！！！ */
+}
+/* 文本�?*/
+.container li .text{
+    width: 100%;
+    height: 100%;
+    background-color: #2c3f52;
+    color: #b7ccde;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    /* 默认缩小0.7倍、不透明度为0 */
+    transform: scale(0.7);
+    opacity: 0;
+    /* 设置过渡 */
+    transition: 0.3s; /* MIUI9快如闪电！！！！！！！！ */
+}
+.container li h3{
+    color: #fff;
+}
+.container li h4{
+  color: #fff;
+  text-align: left;
+  font-weight: normal;
+}
+.container li a{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: #2b80ae;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 2px;
+}
+/* 悬停时图片变�?*/
+.container li:hover img{
+	transform: scale(0.4);
+	top: 45px;
+	border-radius: 50%;
+	border: 8px solid rgba(255,255,255,0.25);
+}
+/* 悬停时文本层变化 */
+.container li:hover .text{
+  	transform: scale(1);
+  	opacity: 1;
+}
+
+.part1 {
+	font-size: 30px;
+	text-align: center;
+}
+
+/**footer**/
+.footer {
+	flex-shrink: 0;
+	background-color: #333; /* 灰色背景 */
+	color: white; /* 白色文字 */
+	padding: 20px 0;
+}
+
+.footer-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+.footer-logo img {
+	max-height: 50px; /* 调整logo大小 */
+}
+
+.footer-info {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer-links a {
+	color: white;
+	text-decoration: none;
+	margin-right: 15px;
+}
+
+.footer-links a:hover {
+	text-decoration: underline;
+}
+
+.footer-contact {
+	margin: 10px 0;
+}
+
+.footer-contact span {
+	margin-right: 15px;
+}
+
+.footer-copyright {
+	font-size: 0.9em;
+}
+/* 响应式样�?*/
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* 保持这个�?确保菜单在导航栏下方 */
+    left: 20px; /* 与导航栏的左内边距对�?*/
+    width: auto; /* 改为自动宽度 */
+    background: rgba(0, 0, 0, 0.8);
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 0 0 5px 5px; /* 可�?添加圆角 */
+    }
+
+    .nav-menu li {
+        margin: 5px 0;
+        text-align: left; /* 左对齐文�?*/
+        white-space: nowrap; /* 防止文本换行 */
+    }
+      .nav-menu.active {
+          display: flex;
+      }
+      .container li {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .container li img {
+        width: 100%;
+        height: auto;
+    }
+    .container ul {
+        flex-direction: column;
+    }
+    .container li .text {
+        padding: 10px;
+    }
+}
+
+/* ���ز˵����ӦС��Ļ */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}

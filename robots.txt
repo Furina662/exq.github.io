@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+User-agent: bingbot
+Disallow: / (如果存在这类规则，需修改为允许爬行)
+
+Sitemap: https://exqstudio.cn/sitemap.xml

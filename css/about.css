@@ -1,0 +1,596 @@
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    overflow: hidden;
+    /* 禁止滚动条出现 */
+    scroll-snap-type: y mandatory;
+    overflow-y: hidden;
+    margin: 0;
+    padding: 0%;
+}
+
+/** 导航栏 **/
+nav {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 1000;
+    /* 导航栏位于页面其他内容上，请确认页面内容高度与导航栏同步！padding-top=60px */
+}
+
+nav img {
+    width: 120px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    left: 50px;
+    margin-left: 120px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav div a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+nav ul li a:hover {
+    color: skyblue;
+}
+
+/* 页面容器 */
+@font-face {
+    font-family: '站酷文艺体';
+    /* 给字体起个名字 */
+    src: url('/font/站酷文艺体.ttf') format('ttf');
+}
+
+.pages {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* 确保页面不会滚动 */
+}
+
+/* 每个页面样式 */
+.page {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 36px;
+    transition: transform 0.5s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.page:nth-child(1) {
+    background: linear-gradient(0deg, #00f2fe, #53f576, #a6f21a) no-repeat;
+}
+
+.page:nth-child(2) {
+    background: linear-gradient(0deg, #a418e0, #3a75f5, #00f2fe) no-repeat;
+}
+
+.page:nth-child(3) {
+    background: linear-gradient(0deg, #ef3e1f, #b22bda, #a418e0) no-repeat;
+}
+
+.page:nth-child(4) {
+    background: linear-gradient(0deg, #ffc868, #f77d37, #ef3e1f) no-repeat;
+}
+
+.page:nth-child(5) {
+    background: linear-gradient(0deg, #39ef85, #c3f184, #ffc868) no-repeat;
+}
+
+.page:nth-child(6) {
+    background: linear-gradient(0deg, #1c91ea, #2fe299, #39ef85) no-repeat;
+}
+
+.page:nth-child(7) {
+    background: linear-gradient(0deg, #c617ed, #6240f0, #1c91ea) no-repeat;
+}
+
+.page:nth-child(8) {
+    background: linear-gradient(0deg, #a82be0, #a82be0, #c617ed) no-repeat;
+}
+
+/* 文本区域 */
+.text-content-left {
+    position: absolute;
+    left: 10%;
+    top: 15%;
+    color: #ffffff;
+    max-width: 35%;
+    /* 限制文本区域的宽度，避免与卡片重叠 */
+    z-index: 2;
+    font-family: "站酷文艺体";
+}
+
+.text-content-left h1 {
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-content-left p {
+    font-size: 30px;
+    line-height: 1.6;
+    color: #e8f9e8;
+}
+
+.text-content-right {
+    position: absolute;
+    right: 15%;
+    top: 25%;
+    max-width: 35%;
+    /* 限制文本区域的宽度，避免与卡片重叠 */
+    color: #ffffff;
+    z-index: 2;
+    font-family: "站酷文艺体";
+}
+
+.text-content-right h1 {
+    font-size: 100px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.text-content-right p {
+    font-size: 30px;
+    line-height: 1.6;
+    color: #e8f9e8;
+    margin: 0;
+    /* 清除外边距 */
+    padding: 0;
+    /* 清除内边距 */
+}
+
+.Furina {
+    position: relative;
+    /* 设置容器为相对定位 */
+    width: 100%;
+    /* 容器宽度可以根据需要调整 */
+    height: auto;
+    /* 容器高度根据需要调整 */
+}
+
+.Furina img {
+    position: absolute;
+    /* 设置图片为绝对定位 */
+    top: 50%;
+    /* 设置图片从容器顶部50%开始 */
+    left: 43%;
+    /* 设置图片从容器左边50%开始 */
+    transform: translate(-50%, -50%);
+    /* 将图片中心对齐容器中心 */
+    width: auto;
+    /* 图片宽度可以自适应 */
+    height: auto;
+    /* 设置图片的高度为容器高度 */
+}
+
+.Furina2 {
+    position: absolute;
+    bottom: 20%;
+    /* 距离页面底部 10% */
+    left: 52%;
+    /* 水平居中 */
+    transform: translateX(-50%);
+    /* 修正水平位置 */
+    z-index: 1000;
+    /* 确保在其他元素上层 */
+}
+
+/* 卡牌容器样式 */
+.card-container-right {
+    position: absolute;
+    right: 20%;
+    /* 卡牌固定在右侧 */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    /* 卡片容器宽度 */
+    height: auto;
+}
+
+.card-container-left {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    /* 卡片容器宽度 */
+    height: auto;
+}
+
+/* 卡牌背景 */
+.card {
+    position: absolute;
+    width: 640px;
+    height: 640px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transform: rotate(0deg);
+    z-index: 8;
+    transition: transform 0.3s ease;
+}
+
+/* 卡牌内的图片 */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#back-to-home {
+    position: fixed;
+    bottom: 30px;
+    /* 离页面底部的距离 */
+    right: 30px;
+    /* 离页面右侧的距离 */
+    z-index: 1000;
+    /* 保证在最前面显示 */
+}
+
+.back-home-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 16px;
+    /* 字体大小 */
+    color: white;
+    /* 文字颜色 */
+    text-decoration: none;
+    /* 去掉下划线 */
+    background: linear-gradient(45deg, #1e90ff, #6a5acd);
+    /* 渐变背景 */
+    border-radius: 25px;
+    /* 按钮圆角 */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    /* 按钮阴影 */
+    transition: all 0.3s ease;
+    /* 添加平滑过渡效果 */
+}
+
+.back-home-btn:hover {
+    background: linear-gradient(45deg, #1e90ff, #6a5acd);
+    /* 鼠标悬浮时渐变反转 */
+    transform: translateY(-3px);
+    /* 悬浮时微微向上移动 */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+    /* 增强阴影效果 */
+}
+
+.back-home-btn:active {
+    transform: translateY(1px);
+    /* 点击时稍微向下 */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    /* 按下的阴影 */
+}
+
+/* 文本打字机效果 */
+.typing-text {
+    font-size: 30px;
+    /* 设置字体大小 */
+    line-height: 1;
+    /* 确保行高与字体大小一致 */
+    margin: 0;
+    /* 清除外边距 */
+    padding: 0;
+    /* 清除内边距 */
+    display: inline-block;
+    /* 避免块状布局问题 */
+    vertical-align: middle;
+    /* 设置垂直对齐方式 */
+    border-right: 2px solid black;
+    /* 打字机光标样式 */
+    animation: blink 0.3s steps(1) infinite;
+    /* 光标闪烁动画 */
+}
+
+
+@keyframes blink {
+    from {
+        border-color: transparent;
+    }
+
+    to {
+        border-color: black;
+    }
+}
+
+nav {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    transition: 0.3s;
+}
+
+nav img {
+    width: 120px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    left: 50px;
+    margin-left: 120px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+nav div {
+    display: flex;
+    align-items: center;
+}
+
+nav div a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+    font-size: 16px;
+    position: relative;
+    z-index: 1;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        /* 保持这个值,确保菜单在导航栏下方 */
+        left: 20px;
+        /* 与导航栏的左内边距对齐 */
+        width: auto;
+        /* 改为自动宽度 */
+        background: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 0 0 5px 5px;
+        /* 可选:添加圆角 */
+        z-index: 2;
+    }
+
+    .nav-menu li {
+        margin: 5px 0;
+        text-align: left;
+        /* 左对齐文本 */
+        white-space: nowrap;
+        /* 防止文本换行 */
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    /* 卡牌背景 */
+    .card {
+        position: absolute;
+        width: 160px;
+        height: 160px;
+        background: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        transform: rotate(0deg);
+        z-index: 8;
+        transition: transform 0.3s ease;
+    }
+
+    /* 卡牌容器样式 */
+    .card-container-right {
+        position: absolute;
+        right: -16%;
+        /* 卡牌固定在右侧 */
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        /* 卡片容器宽度 */
+        height: auto;
+    }
+
+    .card-container-left {
+        position: absolute;
+        left: -16%;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 320px;
+        /* 卡片容器宽度 */
+        height: auto;
+    }
+
+    /* 文本区域 */
+    .text-content-left {
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        color: #ffffff;
+        max-width: 40%;
+        /* 限制文本区域的宽度，避免与卡片重叠 */
+        z-index: 2;
+        font-family: "站酷文艺体";
+    }
+
+    .text-content-left h1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    .text-content-right {
+        position: absolute;
+        right: 20%;
+        top: 10%;
+        color: #ffffff;
+        max-width: 25%;
+        /* 限制文本区域的宽度，避免与卡片重叠 */
+        z-index: 2;
+        font-family: "站酷文艺体";
+    }
+
+    .text-content-right h1 {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+
+    /* 文本打字机效果 */
+    .typing-text {
+        font-size: 15px !important;
+        /* 强制应用字体大小 */
+        display: inline-block;
+        /* 确保宽度和高度基于内容 */
+        width: 100%;
+        /* 或者一个固定值，例如 300px */
+        line-height: 1.5;
+        /* 确保行高统一 */
+        white-space: pre-wrap;
+        /* 保留换行格式 */
+    }
+
+    .furina {
+        position: relative;
+        /* 设置容器为相对定位 */
+        width: 100%;
+        /* 容器宽度可以根据需要调整 */
+        height: 500px;
+        /* 容器高度根据需要调整 */
+    }
+
+    .furina img {
+        position: absolute;
+        /* 设置图片为绝对定位 */
+        top: 35%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        /* 将图片中心对齐容器中心 */
+        width: auto;
+        /* 图片宽度可以自适应 */
+        height: 100%;
+        /* 设置图片的高度为容器高度 */
+    }
+
+    .furina2 {
+        position: absolute;
+        top: 0%;
+        left: 81%;
+        /* 水平居中 */
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
+
+    .furina2 img {
+        width: 140px;
+        /* 设置宽度 */
+        height: auto;
+        /* 高度自适应比例 */
+    }
+
+}
