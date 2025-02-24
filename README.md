@@ -1,2 +1,2 @@
 # exq.github.io
-这里是exqstudio.cn的项目。
+探索无限，精彩无界。
