@@ -94,28 +94,7 @@ h2 {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-.virus-item p {
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-.virus-item a {
-    display: block;
-    margin: 5px 0;
-    color: skyblue;
-    text-decoration: none;
-}
-
-.virus-item a:hover {
-    color: deepskyblue;
-}
-
-.virus-item:nth-last-of-type(6) a:nth-of-type(2) {
-    text-decoration: line-through;
-    text-decoration-thickness: 2px;
-}
-
-.overlay {
+.virus-item 
     display: none;
     position: fixed;
     top: 0;
