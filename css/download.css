@@ -1,9 +1,10 @@
 body {
     margin: 0;
-    font-family: Noto Sans SC;
+    font-family: "Noto Sans SC", sans-serif;
     position: relative;
     color: white;
-    padding-top: 60px; /* 与导航栏高度相同 */
+    padding-top: 60px;
+    /* 与导航栏高度相同 */
 }
 
 
@@ -79,14 +80,12 @@ nav ul li a:hover {
 
 h1,
 h2 {
-    font-family: 'Noto Sans SC', sans-serif;
-    font-weight: 500;
     text-align: center;
 }
 
 .warninfo {
     color: red;
-    font-size: 24px;
+    font-size: 18px;
 }
 
 
@@ -115,12 +114,12 @@ h2 {
 .virus-item a {
     display: block;
     margin: 5px 0;
-    color: #00bfff;
+    color: skyblue;
     text-decoration: none;
 }
 
 .virus-item a:hover {
-    color: #ff8c00;
+    color: deepskyblue;
 }
 
 .virus-item:nth-last-of-type(6) a:nth-of-type(2) {
@@ -135,8 +134,10 @@ h2 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* 更深的透明遮罩层 */
+    z-index: 1000;
+    backdrop-filter: blur(5px);
 }
 
 .popup {
@@ -147,13 +148,21 @@ h2 {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    width: 700px;
+    width: 460px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(45deg, #71c9ce, #7799CC);
+    background: white;
 }
 
-.popup > p {
+.popup h1 {
+    color: #333;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.popup>p {
     padding-top: 3px;
+    color: #555;
+    font-size: 1em;
 }
 
 .msg {
@@ -162,32 +171,32 @@ h2 {
 
 .note {
     font-size: 22px;
-    color: yellow;
+    font-weight: bold;
     text-align: center;
 }
 
 .OK {
-    width: 144px;
-    height: 50px;
-    display: flex;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    border: 3px, solid, #54acb0;
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
     border-radius: 5px;
-    background: #208e94;
-    border: 0;
-    color: white;
-    font-size: large;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
 }
+
 /**footer**/
 .footer {
     /* 移除 position: fixed 以及相关定位属性 */
     width: 100%;
-    background-color: #333; /* 灰色背景 */
-    color: white; /* 白色文字 */
+    background-color: #333;
+    /* 灰色背景 */
+    color: white;
+    /* 白色文字 */
     padding: 20px 0;
     /* 移除或者降低 z - index 值 */
     z-index: auto;
@@ -203,7 +212,8 @@ h2 {
 }
 
 .footer-logo img {
-    max-height: 50px; /* 调整logo大小 */
+    max-height: 50px;
+    /* 调整logo大小 */
 }
 
 .footer-info {
@@ -232,3 +242,4 @@ h2 {
 .footer-copyright {
     font-size: 0.9em;
 }
+/*我真是服了有空我得重新整理下*/
