@@ -283,6 +283,17 @@ h1:hover {
     color: deepskyblue;
 }
 
+.AetherLumine {
+    color: gold;
+    font-family: '站酷文艺体';
+    font-size: 160%;
+}
+
+.AetherLumine:hover {
+    color: gold;
+}
+
+
 /** 团队信息 **/
 .team {
     text-align: center;
