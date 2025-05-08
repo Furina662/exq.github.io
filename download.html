@@ -28,7 +28,7 @@
                 3.我们对不当使用（比如在实体机上运行、传播）造成的损失概不负责。
             </p>
             <p class="note">
-                **当你点击确定或下载病毒样本时，即视为默认同意以上规定**</p>
+                当你点击确定或下载病毒样本时，即视为默认同意以上规定<br><br><br></p>
             <button class="OK">确定</button>
         </div>
     </div>
@@ -56,15 +56,24 @@
     <div class="background"></div>
     <style>
         body {
+            /* 默认桌面端背景 */
             background-image: url('https://www.helloimg.com/i/2025/05/07/681afb6fd2b8f.jpg');
             background-size: cover;
             background-attachment: fixed;
             background-repeat: no-repeat;
+
+            /* 移动端适配 */
+            @media (max-width: 768px) {
+                background-image: url('https://www.helloimg.com/i/2025/05/09/681d35ba309e5.jpg');
+                /* 可选移动端专属调整 */
+                background-attachment: scroll;
+                /* 移动端建议改为滚动模式 */
+            }
         }
     </style>
     <div class="content">
         <h1>下载页面</h1>
-        <h2 class="warninfo">警告：该页面所有文件都是病毒样本！下载时请小心处理，避免造成数据损失！<br>提示：解压密码一律为infected
+        <h2 class="warninfo">警告：该页面所有文件都是病毒样本！下载时请小心处理，避免造成数据损失！<br>（解压密码一律为infected）
         </h2>
 
 
