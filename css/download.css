@@ -1,11 +1,3 @@
-body {
-    margin: 0;
-    font-family: "Noto Sans SC", sans-serif;
-    position: relative;
-    color: white;
-    padding-top: 60px;
-    /* 与导航栏高度相同 */
-}
 
 
 /** 导航栏 **
@@ -178,21 +170,7 @@ h2 {
     padding: 0 20px;
 }
 
-.footer-logo img {
-    max-height: 50px;
-    /* 调整logo大小 */
-}
 
-.footer-info {
-    display: flex;
-    flex-direction: column;
-}
-
-.footer-links a {
-    color: white;
-    text-decoration: none;
-    margin-right: 15px;
-}
 
 .footer-links a:hover {
     text-decoration: underline;
