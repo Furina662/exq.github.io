@@ -202,7 +202,7 @@ h1:hover {
     transform: translate(-50%, -50%);
     background: linear-gradient(145deg, #ffffff, #f0f0f0);
     /* 渐变背景 */
-    border-radius: 15px;
+    border-radius: 8px;
     /* 圆角效果 */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     /* 投影效果 */
