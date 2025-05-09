@@ -56,18 +56,19 @@
     <div class="background"></div>
     <style>
         body {
-            /* 默认桌面端背景 */
             background-image: url('https://www.helloimg.com/i/2025/05/07/681afb6fd2b8f.jpg');
             background-size: cover;
+            background-position: center;
+            /* 确保关键内容居中显示 */
             background-attachment: fixed;
             background-repeat: no-repeat;
+        }
 
-            /* 移动端适配 */
-            @media (max-width: 768px) {
+        /* 移动端竖屏 */
+        @media (max-width: 768px) and (orientation: portrait) {
+            body {
                 background-image: url('https://www.helloimg.com/i/2025/05/09/681d35ba309e5.jpg');
-                /* 可选移动端专属调整 */
                 background-attachment: scroll;
-                /* 移动端建议改为滚动模式 */
             }
         }
     </style>
