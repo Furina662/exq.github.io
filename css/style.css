@@ -1,7 +1,5 @@
-/** 重置 **/
 @font-face {
     font-family: 'Noto Sans SC';
-    /* 给字体起个名字 */
     src: url('/font/NotoSans/NotoSansSC-Regular.otf') format('otf');
 }
 
@@ -290,7 +288,7 @@ h1:hover {
 }
 
 .AetherLumine:hover {
-    color: gold;
+    color: darkgoldenrod;
 }
 
 
@@ -388,10 +386,13 @@ h1:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed; /* 固定在页面顶部 */
-    top: 60px; /* 位于导航栏下方 */
+    position: fixed;
+    /* 固定在页面顶部 */
+    top: 60px;
+    /* 位于导航栏下方 */
     left: 0;
-    z-index: 999; /* 确保横幅在内容之上，但在导航栏之下 */
+    z-index: 999;
+    /* 确保横幅在内容之上，但在导航栏之下 */
 }
 
 .popup-link {
