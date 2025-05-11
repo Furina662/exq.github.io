@@ -538,7 +538,7 @@ h1 {
 
 @keyframes ChangeColor {
     0% {
-        color: deepskyblue;
+        color: #146c8a;
     }
 
     50% {
@@ -546,6 +546,6 @@ h1 {
     }
 
     100% {
-        color: deepskyblue;
+        color: #146c8a;
     }
 }
