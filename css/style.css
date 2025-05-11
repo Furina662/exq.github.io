@@ -210,7 +210,7 @@ h1:hover {
     width: 90%;
     max-width: 600px;
     /* 限制最大宽度 */
-    z-index: 1001;
+    z-index: 1005;
     animation: fadeIn 0.5s ease-in-out;
     /* 弹窗淡入效果 */
 }
