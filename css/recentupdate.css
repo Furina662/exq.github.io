@@ -6,7 +6,7 @@ body {
 }
 
 body {
-    background: linear-gradient(45deg, rgb(20, 108, 138), lightblue) no-repeat;
+    background: linear-gradient(45deg, #146c8a, #add8e6) no-repeat;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
