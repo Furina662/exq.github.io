@@ -67,6 +67,124 @@ body {
     z-index: 999;
 }
 
+.virus-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.virus-item {
+    background: rgba(0, 0, 0, 0.7);
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.virus-item p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.virus-item a {
+    display: block;
+    margin: 5px 0;
+    color: skyblue;
+    text-decoration: none;
+}
+
+.virus-item a:hover {
+    color: deepskyblue;
+}
+
+.virus-item:nth-last-of-type(6) a:nth-of-type(2) {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* 更深的透明遮罩层 */
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 410px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    background: white;
+    /* 新增动画属性 */
+    opacity: 0;
+    /* 初始透明 */
+    animation: fadeIn 0.5s ease-in-out forwards;
+    /* 执行动画并保持最终状态 */
+}
+
+.popup h1 {
+    color: #333;
+    font-size: 1.5em;
+    text-align: left;
+}
+
+.popup>p {
+    padding-top: 3px;
+    color: #555;
+    font-size: 1em;
+}
+
+.msg {
+    font-size: 18px;
+}
+
+.note {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.OK {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+}
+
+/** 弹窗淡入动画 **/
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
 /** 导航栏 **/
 nav {
     background: rgba(0, 0, 0, 0.5);
