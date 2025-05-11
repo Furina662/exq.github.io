@@ -6,6 +6,8 @@ body {
 }
 
 body {
+    background: linear-gradient(45deg, rgb(20, 108, 138), lightblue) no-repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -30,17 +32,21 @@ body {
     /* 左内边距 */
     margin: 10px;
     /* 增加外间距避免粘连 */
-    box-shadow: 0 20px 80px 40px rgba(14, 13, 13, 0.15);
+    box-shadow: 0 10px 60px 20px rgba(14, 13, 13, 0.384);
     /* 可选投影增强立体感 */
     max-width: 700px;     /* 必须设置最大宽度 */
     width: 100%;           /* 默认占满可用空间 */
     margin-left: auto;      /* 自动计算左外边距 */
     margin-right: auto;     /* 自动计算右外边距 */
+    background: white;
+    z-index: 900;
 }
 
 .title {
     font-size: 0.8em;
     text-align: center;
+    color: #fff;
+    z-index: 999;
 }
 
 /** 导航栏 **/
