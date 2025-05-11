@@ -1,12 +1,71 @@
+html,
 body {
+    height: 100%;
     margin: 0;
-    font-family: "Noto Sans SC", sans-serif;
-    position: relative;
-    color: white;
-    padding-top: 60px;
-    /* 与导航栏高度相同 */
+    padding: 0;
 }
 
+body {
+    background: linear-gradient(45deg, rgb(20, 108, 138), lightblue) no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 60px;
+    /* 与导航栏高度相同 */
+    background-image: url('https://www.helloimg.com/i/2025/05/07/681afb6fd2b8f.jpg');
+    background-size: cover;
+    background-position: center;
+    /* 确保关键内容居中显示 */
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/* 移动端竖屏 */
+@media (max-width: 768px) and (orientation: portrait) {
+    body {
+        background-image: url('https://www.helloimg.com/i/2025/05/09/681d35ba309e5.jpg');
+        background-attachment: fixed;
+    }
+}
+
+.recentupdate {
+    font-size: 1em;
+    /* 新增边框样式 */
+    border: 0px solid #333;
+    /* 实线边框 */
+    border-radius: 8px;
+    /* 强制矩形（无圆角） */
+    padding-top: 15px;
+    /* 上内边距 */
+    padding-right: 15px;
+    /* 右内边距 */
+    padding-bottom: 15px;
+    /* 下内边距 */
+    padding-left: 15px;
+    /* 左内边距 */
+    margin: 10px;
+    /* 增加外间距避免粘连 */
+    box-shadow: 0 10px 60px 20px rgba(14, 13, 13, 0.384);
+    /* 可选投影增强立体感 */
+    max-width: 700px;
+    /* 必须设置最大宽度 */
+    width: 100%;
+    /* 默认占满可用空间 */
+    margin-left: auto;
+    /* 自动计算左外边距 */
+    margin-right: auto;
+    /* 自动计算右外边距 */
+    background: white;
+    z-index: 900;
+}
+
+.title {
+    font-size: 0.8em;
+    text-align: center;
+    color: #fff;
+    z-index: 999;
+}
 
 /** 导航栏 **/
 nav {
@@ -78,115 +137,8 @@ nav ul li a:hover {
     color: skyblue;
 }
 
-h1,
-h2 {
-    text-align: center;
-}
-
-.warninfo {
-    color: red;
-    font-size: 18px;
-}
-
-
-.virus-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.virus-item {
-    background: rgba(0, 0, 0, 0.7);
-    margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.virus-item p {
-    margin: 10px 0;
-    font-size: 18px;
-}
-
-.virus-item a {
-    display: block;
-    margin: 5px 0;
-    color: skyblue;
-    text-decoration: none;
-}
-
-.virus-item a:hover {
-    color: deepskyblue;
-}
-
-.virus-item:nth-last-of-type(6) a:nth-of-type(2) {
-    text-decoration: line-through;
-    text-decoration-thickness: 2px;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    /* 更深的透明遮罩层 */
-    z-index: 1000;
-    backdrop-filter: blur(5px);
-}
-
-.popup {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    width: 404px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    background: white;
-}
-
-.popup h1 {
-    color: #333;
-    font-size: 1.5em;
-    text-align: left;
-}
-
-.popup>p {
-    padding-top: 3px;
-    color: #555;
-    font-size: 1em;
-}
-
-.msg {
-    font-size: 18px;
-}
-
-.note {
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.OK {
-    padding: 10px 20px;
-    font-size: 1em;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    position: absolute;
-    right: 30px;
-    bottom: 20px;
+.main-content {
+    flex: 1 0 auto;
 }
 
 /**footer**/
@@ -242,4 +194,82 @@ h2 {
 .footer-copyright {
     font-size: 0.9em;
 }
-/*我真是服了有空我得重新整理下*/
+
+/* 响应式样式 */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 60px;
+        /* 保持这个值,确保菜单在导航栏下方 */
+        left: 20px;
+        /* 与导航栏的左内边距对齐 */
+        width: auto;
+        /* 改为自动宽度 */
+        background: rgba(0, 0, 0, 0.8);
+        flex-direction: column;
+        padding: 10px;
+        border-radius: 0 0 5px 5px;
+        /* 可选:添加圆角 */
+    }
+
+    .nav-menu li {
+        margin: 5px 0;
+        text-align: left;
+        /* 左对齐文本 */
+        white-space: nowrap;
+        /* 防止文本换行 */
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    main-content {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .qrcode {
+        max-width: 150px;
+    }
+
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .qrcode {
+        max-width: 120px;
+    }
+
+    .thanks p {
+        font-size: 14px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 4px;
+    }
+}
