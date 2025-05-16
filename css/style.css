@@ -1,13 +1,13 @@
 @font-face {
-    font-family: 'Noto Sans SC';
-    src: local('Noto Sans SC');
+    font-family: 'Noto Serif SC';
+    src: local('Noto Serif SC');
 }
 
 * {
     margin: 0%;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Noto Sans SC", sans-serif;
+    font-family: "Noto Serif SC", sans-serif;
     user-select: none;
 }
 
