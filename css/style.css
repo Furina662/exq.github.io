@@ -1,13 +1,14 @@
 @font-face {
-    font-family: 'Noto Serif SC';
-    src: local('Noto Serif SC');
+    font-family: 'Noto Sans SC';
+    src: local('Noto Sans SC');
+    src: local('Noto Sans SC Medium');
+    src: local('Noto Sans SC Bold');
 }
 
 * {
     margin: 0%;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Noto Serif SC", sans-serif;
     user-select: none;
 }
 
@@ -110,7 +111,7 @@ h1 {
     animation: fade-in-down 1s both;
     -webkit-animation: fade-in-down 1s both;
     mix-blend-mode: screen;
-    font-family: "Noto Sans SC", sans-serif;
+    font-family: "Noto Sans SC Bold", sans-serif;
 }
 
 h1:hover {
