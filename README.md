@@ -31,7 +31,7 @@
 
 ## 联系我们
 
-- QQ 群：[538933981](http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=s9hmkfGoSf-wJU7F9utssiFY1H8n1Wm1&authKey=xn9gD93GzSQuPXeL6iGcDgVtqgeCgWuPGYUSSSGJUoztP%2F0fE0yZxwu7mb%2BPvg0M&noverify=0&group_code=538933981)
+- QQ 群：[538933981](https://qm.qq.com/q/t3iS9jJZUk)
 - 邮箱：exqstudio@outlook.com
 
 ---
