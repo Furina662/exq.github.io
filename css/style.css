@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Noto Sans SC';
-    src: url('/font/NotoSans/NotoSansSC-Regular.otf') format('otf');
+    src: local('Noto Sans SC');
 }
 
 * {
@@ -100,10 +100,10 @@ nav ul li a:hover {
     color: #fff;
 }
 
-.top-section {
+.headline {
     margin-bottom: 20px;
     /* 在顶部区域和描述之间添加一些间距 */
-    font-size: 35px;
+    font-size: 32px;
 }
 
 h1 {
@@ -119,6 +119,19 @@ h1:hover {
 
 }
 
+@keyframes ChangeColor {
+    0% {
+        color: #146c8a;
+    }
+
+    50% {
+        color: aqua;
+    }
+
+    100% {
+        color: #146c8a;
+    }
+}
 
 @keyframes pageTitleText {
 
@@ -131,7 +144,7 @@ h1:hover {
     }
 
     20% {
-        text-shadow: 4px 0 0 turquoise;
+        text-shadow: 4px 0 0 aqua;
     }
 
     30% {
@@ -147,7 +160,7 @@ h1:hover {
     }
 
     60% {
-        text-shadow: 0 4px 0 turquoise;
+        text-shadow: 0 4px 0 aqua;
     }
 
     70% {
@@ -163,7 +176,7 @@ h1:hover {
     }
 
     100% {
-        text-shadow: 4px 0 0 turquoise;
+        text-shadow: 4px 0 0 aqua;
     }
 }
 
@@ -536,16 +549,3 @@ h1 {
     animation: ChangeColor 3s infinite;
 }
 
-@keyframes ChangeColor {
-    0% {
-        color: #146c8a;
-    }
-
-    50% {
-        color: aqua;
-    }
-
-    100% {
-        color: #146c8a;
-    }
-}
