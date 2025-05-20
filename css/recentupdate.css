@@ -6,19 +6,49 @@ body {
 }
 
 body {
+    background: linear-gradient(45deg, #146c8a, #add8e6) no-repeat;
+    background-attachment: fixed;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    padding-top: 60px; /* 与导航栏高度相同 */
+    padding-top: 60px;
+    /* 与导航栏高度相同 */
 }
 
-.recentupdate{
-    font-size: 1.4em;
-    padding: 30px;
+.recentupdate {
+    font-size: 1em;
+    /* 新增边框样式 */
+    border: 0px solid #333;
+    /* 实线边框 */
+    border-radius: 8px;
+    /* 强制矩形（无圆角） */
+    padding-top: 15px;
+    /* 上内边距 */
+    padding-right: 15px;
+    /* 右内边距 */
+    padding-bottom: 15px;
+    /* 下内边距 */
+    padding-left: 15px;
+    /* 左内边距 */
+    margin: 10px;
+    /* 增加外间距避免粘连 */
+    box-shadow: 0 10px 60px 20px rgba(14, 13, 13, 0.384);
+    /* 可选投影增强立体感 */
+    max-width: 700px;     /* 必须设置最大宽度 */
+    width: 100%;           /* 默认占满可用空间 */
+    margin-left: auto;      /* 自动计算左外边距 */
+    margin-right: auto;     /* 自动计算右外边距 */
+    background: white;
+    z-index: 900;
 }
-.title{
-    padding-left: 30px;
+
+.title {
+    font-size: 0.8em;
+    text-align: center;
+    color: #fff;
+    z-index: 999;
 }
+
 /** 导航栏 **/
 nav {
     background: rgba(0, 0, 0, 0.5);

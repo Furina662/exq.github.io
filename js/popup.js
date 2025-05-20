@@ -16,12 +16,12 @@ function startCountdown(duration, button) {
     // 更新倒计时显示
     const countdown = setInterval(() => {
         timer--;
-        button.textContent = `${timer}秒后可关闭此提示`;
+        button.textContent = `${timer}秒后可关闭`;
 
         if (timer <= 0) {
             clearInterval(countdown);
             button.disabled = false;
-            button.textContent = "我已知晓"; // 倒计时结束后更新按钮文本
+            button.textContent = "确定"; // 倒计时结束后更新按钮文本
         }
     }, 1000);
 }

@@ -1,15 +1,14 @@
-/** 重置 **/
 @font-face {
     font-family: 'Noto Sans SC';
-    /* 给字体起个名字 */
-    src: url('/font/NotoSans/NotoSansSC-Regular.otf') format('otf');
+    src: local('Noto Sans SC');
+    src: local('Noto Sans SC Medium');
+    src: local('Noto Sans SC Bold');
 }
 
 * {
     margin: 0%;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Noto Sans SC", sans-serif;
     user-select: none;
 }
 
@@ -102,17 +101,17 @@ nav ul li a:hover {
     color: #fff;
 }
 
-.top-section {
+.headline {
     margin-bottom: 20px;
     /* 在顶部区域和描述之间添加一些间距 */
-    font-size: 35px;
+    font-size: 32px;
 }
 
 h1 {
     animation: fade-in-down 1s both;
     -webkit-animation: fade-in-down 1s both;
     mix-blend-mode: screen;
-    font-family: "Noto Sans SC", sans-serif;
+    font-family: "Noto Sans SC Bold", sans-serif;
 }
 
 h1:hover {
@@ -121,6 +120,19 @@ h1:hover {
 
 }
 
+@keyframes ChangeColor {
+    0% {
+        color: #146c8a;
+    }
+
+    50% {
+        color: aqua;
+    }
+
+    100% {
+        color: #146c8a;
+    }
+}
 
 @keyframes pageTitleText {
 
@@ -133,7 +145,7 @@ h1:hover {
     }
 
     20% {
-        text-shadow: 4px 0 0 turquoise;
+        text-shadow: 4px 0 0 aqua;
     }
 
     30% {
@@ -149,7 +161,7 @@ h1:hover {
     }
 
     60% {
-        text-shadow: 0 4px 0 turquoise;
+        text-shadow: 0 4px 0 aqua;
     }
 
     70% {
@@ -165,7 +177,7 @@ h1:hover {
     }
 
     100% {
-        text-shadow: 4px 0 0 turquoise;
+        text-shadow: 4px 0 0 aqua;
     }
 }
 
@@ -204,7 +216,7 @@ h1:hover {
     transform: translate(-50%, -50%);
     background: linear-gradient(145deg, #ffffff, #f0f0f0);
     /* 渐变背景 */
-    border-radius: 15px;
+    border-radius: 8px;
     /* 圆角效果 */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     /* 投影效果 */
@@ -212,7 +224,7 @@ h1:hover {
     width: 90%;
     max-width: 600px;
     /* 限制最大宽度 */
-    z-index: 1001;
+    z-index: 1010;
     animation: fadeIn 0.5s ease-in-out;
     /* 弹窗淡入效果 */
 }
@@ -282,6 +294,17 @@ h1:hover {
 .Furina:hover {
     color: deepskyblue;
 }
+
+.AetherLumine {
+    color: gold;
+    font-family: '站酷文艺体';
+    font-size: 160%;
+}
+
+.AetherLumine:hover {
+    color: darkgoldenrod;
+}
+
 
 /** 团队信息 **/
 .team {
@@ -377,10 +400,13 @@ h1:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: fixed; /* 固定在页面顶部 */
-    top: 60px; /* 位于导航栏下方 */
+    position: fixed;
+    /* 固定在页面顶部 */
+    top: 60px;
+    /* 位于导航栏下方 */
     left: 0;
-    z-index: 999; /* 确保横幅在内容之上，但在导航栏之下 */
+    z-index: 999;
+    /* 确保横幅在内容之上，但在导航栏之下 */
 }
 
 .popup-link {
@@ -412,7 +438,7 @@ h1:hover {
     color: white;
     /* 白色文字 */
     padding: 20px 0;
-    z-index: 1000;
+    z-index: 999;
     /* 确保 footer 在其他内容之上 */
 }
 
@@ -524,16 +550,3 @@ h1 {
     animation: ChangeColor 3s infinite;
 }
 
-@keyframes ChangeColor {
-    0% {
-        color: deepskyblue;
-    }
-
-    50% {
-        color: aqua;
-    }
-
-    100% {
-        color: deepskyblue;
-    }
-}
